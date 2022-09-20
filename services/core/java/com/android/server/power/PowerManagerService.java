@@ -5557,8 +5557,8 @@ public final class PowerManagerService extends SystemService
                             updatePowerStateLocked();
                             return;
                         }
-                        wakePowerGroupLocked(mPowerGroups.get(Display.DEFAULT_DISPLAY_GROUP), eventTime,
-                                reason, details, uid, opPackageName, uid);
+                        wakeDisplayGroup(Display.DEFAULT_DISPLAY_GROUP, eventTime, reason, details, uid,
+                        opPackageName, uid);
                     }
                 } finally {
                     Binder.restoreCallingIdentity(ident);

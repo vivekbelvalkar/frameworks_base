@@ -5553,7 +5553,7 @@ public final class PowerManagerService extends SystemService
                 try {
                         wakeDisplayGroup(Display.DEFAULT_DISPLAY_GROUP, eventTime, reason, details, uid,
                         opPackageName, uid);
-                    }
+                   
                 } finally {
                     Binder.restoreCallingIdentity(ident);
                 }

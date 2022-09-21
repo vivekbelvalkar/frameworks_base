@@ -5551,12 +5551,6 @@ public final class PowerManagerService extends SystemService
             final Runnable r = () -> {
                 final long ident = Binder.clearCallingIdentity();
                 try {
-                    synchronized (mLock) {
-                        if (!mBootCompleted && sQuiescent) {
-                            mDirty |= DIRTY_QUIESCENT;
-                            updatePowerStateLocked();
-                            return;
-                        }
                         wakeDisplayGroup(Display.DEFAULT_DISPLAY_GROUP, eventTime, reason, details, uid,
                         opPackageName, uid);
                     }
